@@ -1,7 +1,7 @@
 # Comercio_eletro
 P01- Comercio eletro
 Tomás Silva
-
+Pedro Gonçalves
 
 Esta aplicação tem como finalidade permitir a visualização e seleção de produtos através de uma aplicação web simples.
 Através deste sistema, os utilizadores podem navegar por uma loja online, consultar detalhes de prddutos, adicionar itens a um carrinho e simular o processo de compra.
