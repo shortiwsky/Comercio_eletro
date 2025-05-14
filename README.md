@@ -5,7 +5,7 @@ Pedro Gonçalves
 Simão Carvalho
 Esta aplicação tem como finalidade permitir a visualização e seleção de produtos através de uma aplicação web simples.
 Através deste sistema, os utilizadores podem navegar por uma loja online, consultar detalhes de prddutos, adicionar itens a um carrinho e simular o processo de compra.
-Este tipo de aplicação facilita o acesso a bens serviços, automatiza o processo de vendas e oferece uma experiência prática e acessível ao utilizador, mesmo sem interação física com o vendedor.
+
 
 No nosso site vão existir três tipos de utilizadores. Os administradores: os vendedores e gestores do site; os visitantes: utilizadores sem login que só conseguem visualizar os produtos sem puder comprar; os clientes: os utilizadores com login iniciado podem visualizar os produtos e comprá-los.
 
