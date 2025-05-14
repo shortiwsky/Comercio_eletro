@@ -33,10 +33,10 @@ Prioridade: Alta.
 Código-ADM01:
 Nome: Adicionar produtos.
 Descrição: Como administrador tenho que ter habilidade de adicionar produtos no site.
-Prioridade: Alta
+Prioridade: Médio
 
 Código-ADM02:
 Nome: Alterar produtos.
 Descrição: Como administrador tenho que ter habilidade de alterar informações do produto.
-Prioridade: Alta.
+Prioridade: Médio
 
