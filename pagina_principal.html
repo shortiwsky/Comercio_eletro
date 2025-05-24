@@ -3,48 +3,79 @@
 <head>
   <title>SPS</title>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  background-color: #49ce49;
+  <style>
+    h1 {
+      font-family: 'Oswald', sans-serif;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline;
+    }
+    .card-nintendo {
+      width: 200px;
+      height: 230px;
+      padding: 10px;
+      border: 5px solid white;
+      margin-top: -2mm;   
+      margin-left: 2mm;   
+        background-color: #ffffff;
+      border-radius: 15px;
+    }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f02424;
+    border-radius: 15px;
 }
 
-td, th {
-  border: 1px solid #b6554f;
-  text-align: left;
-  padding: 8px;
+li {
+  float: left;
 }
 
-tr:nth-child(even) {
-  background-color: #d31313;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-h1 {
-  font-family: 'oswald', sans-serif;
+
+li a:hover {
+  background-color: #b63333;
 }
-</style>
+  </style>
 </head>
 <body>
-   <div style="background-color: #49ce49; padding: 10px;">
-   <h1 style="color:black;">SPS</h1>;
-	<table>
-  <tr>
-    <th><a href="pagina_principal.html">Página Principal</a></th>
-    <th><a href="carrinho.html">Carrinho</a></th>
-	<th><a href="LOGIN.html">Login</a></th>
-  </tr>
-</table>
-</div>
-	<div><h3>Produtos populares:</h3>
-    <img src="imagens/nintendoswitch.jpg" alt="Nintendo Switch" width="200" height="150">
-    <p><a href="nintendoswitch.html">Consola Nintendo Switch</a></p>
-    <p style="color:red;">Preço: 289.99€</p>
+  <div style="background-color: #30aae7; padding: 10px; border-radius: 15px;">
+    <h1 style="color:white;">SPS</h1>
+    <ul>
+  <li><a href="pagina_principal.html">Pagina Principal</a></li>
+  <li><a href="carrinho.html">Carrinho</a></li>
+  <li><a href="LOGIN.html">Login/Register</a></li>
+</ul>
   </div>
-	<h2>Quem somos:</h2>
-	<img src="nos.jpg" alt="Uma foto nossa" width="500" height="333">// falta a imagem 
-	<p>Aqui é onde vamos falar um pouco sobre nós e a nossa pagina.</p>
-	<hr></hr>
-	<p>Contactos-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;telemóvel: +351 911111111; email: informacoes.sps@SPS.pt</p>
+
+  <div style="background-color: #dce2dc; padding: 10px;border-radius: 15px;">
+    <h3>Produtos populares:</h3>
+    <a href="nintendoswitch.html" style="display: inline-block;">
+      <div class="card-nintendo">
+        <img src="imagens/nintendoswitch.jpg" alt="Nintendo Switch" width="200" height="150">
+        <p>Consola Nintendo Switch</p>
+        <p style="color:red;">Preço: 289.99€</p>
+      </div>
+    </a>
+  </div>
+
+  <h2>Quem somos:</h2>
+  <img src="nos.jpg" alt="Uma foto nossa" width="500" height="333">
+  <p>Aqui é onde vamos falar um pouco sobre nós e a nossa página.</p>
+  <hr>
+  <p>Contactos: telemóvel: +351 911111111; email: informacoes.sps@SPS.pt</p>
 </body>
 </html>
