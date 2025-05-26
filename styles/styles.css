@@ -1,38 +1,43 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.header {
-  background-color: #33b2eb;
-  padding: 20px;
-  border-radius: 12px 12px 0 0;
-  display: inline-block;
+header {
+    border-bottom: 4px solid #008fd1;
 }
 
-.logo {
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
+.top-bar {
+    background-color: #29a9e1;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.navbar {
-  background-color: #f02828;
-  padding: 10px 20px;
-  border-radius: 16px;
-  display: flex;
-  gap: 40px;
+.menu {
+    background-color: #f21818;
+    padding: 10px 0;
+    border-radius: 15px 15px 0 0;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    padding-left: 20px;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
 }
 
