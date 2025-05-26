@@ -4,13 +4,11 @@ body {
   background-color: #ffffff;
 }
 
-.header {
+.top-bar {
   background-color: #33b2eb;
-  padding: 0;
+  padding: 20px;
   border-radius: 12px 12px 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: inline-block;
 }
 
 .logo {
