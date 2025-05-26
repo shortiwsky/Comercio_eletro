@@ -1,31 +1,99 @@
-
 <!DOCTYPE html>
-<html>
 <head>
-    <title> SPS | LOGIN / REGISTER</title>
+    <title>SPS | LOGIN/REGISTER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        .container {
+	    margin: 150px;
+            display: flex;
+            justify-content: center;
+            gap: 150px;
+        }
+
+        .form-box {
+            border: 1px solid black;
+            padding: 40px;
+            border-radius: 20px;
+            width: 300px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+        h2 {
+	    font-size: 12px;
+            color: red;
+        }
+        h3 {
+            font-size: 15px;
+            color: black;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #29a9e1;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #007bbd;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <link rel="stylesheet" href="styles/styles.css">
-    <header class="header">
-      <box class="box">SPS>
-      <div class="div">
-        <a href="#">Pagina Principal</a>
-        <a href="#">Carrinho</a>
-        <a href="#">Login/Register</a>
-      </div></box>
-    <h1>LOG IN</h1>
-    <p><label for="nome">Nome de utilizador:</label>
-    <input type="text" id="nome de utilizador" name="nome de utilizador" /></p>
-    <p><label for="nome">Palavra passe:</label>
-    <input type="text" id="Palavra passe" name="Palavra passe" /></p>
-    <button><p><a href="produto.html">LOGIN</a></p></button>
-    <h1>REGISTER</h1>
-    <p><label for="nome">Email:</label>
-    <input type="text" id="Email" name="Email" /></p>
-    <p><label for="nome">Nome de utilizador:</label>
-    <input type="text" id="nome de utilizador" name="nome de utilizador" /></p>
-    <p><label for="nome">Palavra passe:</label>
-    <input type="text" id="Palavra passe" name="Palavra passe" /></p>
-    <button><p><a href="produto.html">REGISTER</a></p></button>
+    <div class="container">
+        <div class="form-box">
+            <h1>LOG IN</h1>
+            <h2>Nota:Se ja tiver conta insira os dados aqui.</h2>
+            <h3><label for="login-nome">Nome de utilizador:</label>
+            <input type="text" id="login-nome" name="login-nome" /></h3>
+            
+            <h3><label for="login-pass">Palavra passe:</label>
+            <input type="password" id="login-pass" name="login-pass" /></h3>
+            
+            <button><a href="produto.html">LOGIN</a></button>
+        </div>
+
+        <div class="form-box">
+            <h1>REGISTER</h1>
+            <h2>Nota:Se ainda nao tiver conta no nosso site deve cria-la aqui.</h2>
+            <h3><label for="register-email">Email:</label>
+            <input type="email" id="register-email" name="register-email" /></h3>
+            
+            <h3><label for="register-nome">Nome de utilizador:</label>
+            <input type="text" id="register-nome" name="register-nome" /></h3>
+            
+            <h3><label for="register-pass">Palavra passe:</label>
+            <input type="password" id="register-pass" name="register-pass" /></h3>
+            
+            <button><a href="produto.html">REGISTER</a></button>
+        </div>
+    </div>
 </body>
 </html>
