@@ -1,35 +1,8 @@
-h1 {
-   font-family: 'Oswald', sans-serif;
-}
-ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-}
-li {
-   display: inline;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #f02424;
-    border-radius: 15px;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #b63333;
+.header {
+  border:1px solid blue;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
 }
