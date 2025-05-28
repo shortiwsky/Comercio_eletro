@@ -6,11 +6,7 @@
   <style>
     h1 {
       font-family: 'Oswald', sans-serif;
-    }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+      text-align: center;
     }
     li {
       display: inline;
@@ -32,10 +28,13 @@
   overflow: hidden;
   background-color: #f02424;
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 li {
-  float: left;
+  float: none;
+  display: inline;
 }
 
 li a {
@@ -53,7 +52,7 @@ li a:hover {
 </head>
 <body>
   <div style="background-color: #30aae7; padding: 10px; border-radius: 15px;">
-    <h1 style="color:white;">SPS</h1>
+    <h1 style="color:white;">SPS</h1>,
     <ul>
   <li><a href="pagina_principal.html">Pagina Principal</a></li>
   <li><a href="carrinho.html">Carrinho</a></li>
@@ -63,10 +62,10 @@ li a:hover {
 
   <div style="background-color: #dce2dc; padding: 10px;border-radius: 15px;">
     <h3>Produtos populares:</h3>
-    <a href="nintendoswitch.html" style="display: inline-block;">
+    <a href="nintendoswitch.html" style="display: inline-block;text-decoration: none;">
       <div class="card-nintendo">
         <img src="imagens/nintendoswitch.jpg" alt="Nintendo Switch" width="200" height="150">
-        <p>Consola Nintendo Switch</p>
+        <p style="color: black;">Consola Nintendo Switch</p>
         <p style="color:red;">Preço: 289.99€</p>
       </div>
     </a>
