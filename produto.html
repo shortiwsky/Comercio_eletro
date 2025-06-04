@@ -1,20 +1,88 @@
 <!DOCTYPE html>
-<html> 
-
+<html 
 <head>
-<title> Produto </title>
- Produto 
-<hr> </hr>
 
+    <title>Produto</title>
+     <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        .produto-container {
+            border: 10px solid #ccc;
+            padding: 25px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+
+
+        .descricao,
+        .valor,
+        .detalhes {
+            margin: 20px 0;
+        }
+
+
+        .detalhes input {
+            width: 80%;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        .botao-carrinho {
+            margin-top: 30px;
+        }
+
+        .botao-carrinho a {
+            display: inline-block;
+            background-color:  #29a9e1;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+     .detalhes textarea {
+            width: 100%;
+            padding: 11px;
+               box-sizing: border-box;
+               resize: none;
+            background-color: #f9f9f9;
+               border: 1px solid #ccc;
+        }
+
+
+
+
+    </style>
 </head>
 <body>
-<p> <img src="imagem.jpg" alt="Descrição da imagem"> </p>
-<p> <span style="border: 1px solid black">Valor do produto:	</span> </p>
+
+<div class="produto-container">
+    <pre> <h1>          Produto</pre> </h1>
+    <hr> </hr>
+
+    <div class="descricao">
+        <p>Descrição da imagem:</p>
+    </div>
+
+<div class="vlor">
+    <p><strong>Valor do produto:</strong> </p>
+</div>
+   <div class="detalhes">
+    <p><strong>Acerca do produto:</strong></p>
+    <textarea readonly rows="10" >.</textarea>
+</div>
+
+    <div class="botao-carrinho">
+        <a href="carrinho.html">Carrinho</a>
+    </div>
  
- <p style="border: 1px solid black">Acerca do produto: </p>
- 
-<button> 
-<p><a href="carrinho.html">carrinho</a></p></butoon>
-			
+
+</div>
+
 </body>
 </html>
