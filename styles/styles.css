@@ -88,7 +88,20 @@ menu {
 }
     body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f.finalizar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #29a9e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .finalizar-btn:hover {
+            background-color: #a90000;
+        }4f4f4;
             margin: 0;
             padding: 20px;
         }
@@ -102,7 +115,20 @@ menu {
         }
 
         h1 {
-            text-align: center;
+            text-align: center.finalizar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #29a9e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .finalizar-btn:hover {
+            background-color: #a90000;
+        };
             margin-bottom: 30px;
         }
 
@@ -118,7 +144,20 @@ menu {
             width: 80px;
             height: 80px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 8px.finalizar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #29a9e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .finalizar-btn:hover {
+            background-color: #a90000;
+        };
         }
 
         .produto-info {
@@ -130,7 +169,33 @@ menu {
             font-size: 18px;
             font-weight: bold;
         }
+.finalizar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #29a9e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
 
+        .finalizar-btn:hover {.finalizar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #29a9e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .finalizar-btn:hover {
+            background-color: #a90000;
+        }
+            background-color: #a90000;
+        }
         .quantidade {
             width: 60px;
             padding: 6px;
@@ -139,9 +204,50 @@ menu {
         .subtotal {
             font-weight: bold;
         }
+.finalizar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #29a9e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
 
+       .finalizar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #29a9e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .finalizar-btn:hover {
+            background-color: #a90000;
+        } .finalizar-btn:hover {
+            background-color: #a90000;
+        }
         .total {
             text-align: right;
             margin-top: 20px;
             font-size: 18px;
+        }
+
+      .finalizar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 20px;
+            background-color: #29a9e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .finalizar-btn:hover {
+            background-color: #a90000;
         }
