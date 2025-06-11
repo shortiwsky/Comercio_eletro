@@ -158,6 +158,7 @@ menu {
   body.produto {
             font-family: Arial, sans-serif;
             padding: 10px;
+            background-color: #f4f4f4;
         }
 
         .produto-container {
