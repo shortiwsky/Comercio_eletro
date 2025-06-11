@@ -94,6 +94,13 @@ menu {
             margin: 0;
             padding: 20px;
         }
+         .form2-box {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 80px;
+            width: 300px;
+            box-shadow: 0 0 60px rgba(0,0,0,0.2);
+        }
         .carrinho-container {
             max-width: 900px;
             margin: auto;
