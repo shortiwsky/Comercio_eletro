@@ -2,15 +2,9 @@
 <html>
 <head>
   <title>SPS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/menu.css">
   <style>
-    h1 {
-      font-family: 'Oswald', sans-serif;
-      text-align: center;
-    }
-    li {
-      display: inline;
-    }
     .card-nintendo {
       width: 200px;
       height: 230px;
@@ -18,49 +12,35 @@
       border: 5px solid white;
       margin-top: -2mm;   
       margin-left: 2mm;   
-        background-color: #ffffff;
+      background-color: #ffffff;
       border-radius: 15px;
     }
-    ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #f02424;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-}
-
-li {
-  float: none;
-  display: inline;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #b63333;
-}
+    
+    body {
+      margin: 0;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    
+    .conteudo {
+      background-color: #dce2dc;
+      padding: 10px;
+      border-radius: 15px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
-  <div style="background-color: #30aae7; padding: 10px; border-radius: 15px;">
-    <h1 style="color:white;">SPS</h1>
-    <ul>
-  <li><a href="pagina_principal.html">Pagina Principal</a></li>
-  <li><a href="carrinho.html">Carrinho</a></li>
-  <li><a href="LOGIN.html">Login/Register</a></li>
-</ul>
+  <div class="cabecalho-sps">
+    <h1 class="titulo-sps">SPS</h1>
+    <ul class="menu-navegacao">
+      <li><a href="pagina_principal.html">Pagina Principal</a></li>
+      <li><a href="carrinho.html">Carrinho</a></li>
+      <li><a href="LOGIN.html">Login/Register</a></li>
+    </ul>
   </div>
 
-  <div style="background-color: #dce2dc; padding: 10px;border-radius: 15px;">
+  <div class="conteudo">
     <h3>Produtos populares:</h3>
     <a href="nintendoswitch.html" style="display: inline-block;text-decoration: none;">
       <div class="card-nintendo">
