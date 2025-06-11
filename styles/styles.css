@@ -1,59 +1,61 @@
 /*Estilos do LOGIN*/
-body {
-   font-family: 'Oswald', sans-serif;
-   padding: 10px;
-}
-.container {
-   margin: 10px;
-   display: flex;
-   justify-content: center;
-   gap: 150px;
-}
-.form-box {
-   border: 1px solid black;
-   padding: 40px;
-   border-radius: 20px;
-   width: 300px;
-   background-color: #f9f9f9;
-}
-h1 {
-   font-size: 30px;
-   text-align: center;
-}
-h2 {
-   font-size: 12px;
-   color: red;
-}
-h3 {
-   font-size: 15px;
-   color: black;
-}
-label {
-   display: block;
-   margin-bottom: 10px;
-}
-input {
-   width: 100%;
-   padding: 8px;
-   margin-bottom: 20px;
-}
-button {
-   width: 100%;
-   padding: 15px;
-   background-color: #29a9e1;
-   border: none;
-   color: white;
-   font-weight: bold;
-   cursor: pointer;
-   border-radius: 5px;
-}
-button:hover {
-   background-color: #007bbd;
-}
-a {
-   text-decoration: none;
-   color: white;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #33B5E5;
+            margin: 0;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: red;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .form-box {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        h2 {
+            text-align: center;
+        }
+        .note {
+            color: red;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #33B5E5;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .title {
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
 /*Caixa para o nome do site*/
 .caixa {
     background-color: #30aae7;

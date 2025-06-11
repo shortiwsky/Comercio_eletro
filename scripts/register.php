@@ -1,36 +1,44 @@
 <?php
-$db = new SQLite3('app_database.db');
-$email = $_POST['email'] ?? '';
-$username = $_POST['username'] ?? '';
-$password = $_POST['password'] ?? '';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-if (!$email || !$username || !$password) {
-    die("Por favor, preencha todos os campos.");
+$txtFile = __DIR__ . "/utilizadores.txt";
+$dbFile = __DIR__ . "/app_database.db";
+
+
+if (!file_exists($txtFile)) {
+    die("Ficheiro utilizadores.txt não encontrado.");
 }
 
-$stmt = $db->prepare('SELECT COUNT(*) as count FROM users WHERE email = :email OR username = :username');
-$stmt->bindValue(':email', $email);
-$stmt->bindValue(':username', $username);
-$result = $stmt->execute();
-$row = $result->fetchArray(SQLITE3_ASSOC);
 
-if ($row['count'] > 0) {
-    die("Email ou username já cadastrado.");
-}
+$db = new SQLite3($dbFile);
 
-$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-$stmt = $db->prepare('INSERT INTO users (email, username, password, created_at) VALUES (:email, :username, :password, :created_at)');
-$stmt->bindValue(':email', $email);
-$stmt->bindValue(':username', $username);
-$stmt->bindValue(':password', $hashedPassword);
-$stmt->bindValue(':created_at', date('Y-m-d H:i:s'));
+$handle = fopen($txtFile, "r");
+if ($handle) {
+    while (($line = fgets($handle)) !== false) {
+        $line = trim($line);
+        if (empty($line)) continue;
 
-if ($stmt->execute()) {
-    echo "Usuário registrado com sucesso! <a href='login.html'>Clique aqui para fazer login.</a>";
+        list($email, $username, $password) = explode("|", $line);
+
+
+        $stmt = $db->prepare("SELECT COUNT(*) as total FROM utilizadores WHERE username = :username");
+        $stmt->bindValue(':username', $username, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        $exists = $result->fetchArray(SQLITE3_ASSOC);
+
+        if ($exists['total'] == 0) {
+            $insert = $db->prepare("INSERT INTO utilizadores (email, username, password) VALUES (:email, :username, :password)");
+            $insert->bindValue(':email', $email, SQLITE3_TEXT);
+            $insert->bindValue(':username', $username, SQLITE3_TEXT);
+            $insert->bindValue(':password', $password, SQLITE3_TEXT);
+            $insert->execute();
+        }
+    }
+    fclose($handle);
+    echo "✔️ Dados importados para o SQLite com sucesso.";
 } else {
-    echo "Erro ao registrar usuário.";
+    die("Erro ao abrir o ficheiro.");
 }
-
-$db->close();
 ?>

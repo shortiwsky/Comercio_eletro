@@ -1,36 +1,47 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-    <title>SPS | LOGIN/REGISTER</title>
+    <meta charset="UTF-8">
+    <title>SPS - Login/Register</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div class="caixa">
-        <SPS>SPS</SPS>
-        <menu>
-            <lista><a href="pagina_principal.html">Pagina Principal</a></lista>
-            <lista><a href="carrinho.html">Carrinho</a></lista>
-            <lista><a href="LOGIN.html">Login/Register</a></lista>
-        </menu>
+
+    <div class="title">SPS</div>
+
+    <div class="navbar">
+        <a href="#">Página Principal</a>
+        <a href="#">Carrinho</a>
+        <a href="#">Login/Register</a>
+    </div>
+
     <div class="container">
         <div class="form-box">
-            <h1>LOG IN</h1>
- 	    <form action="login.php" method="POST">
-            <h2>Nota:Se ja tiver conta insira os dados aqui.</h2>
-            <h3><label>Username: <input type="text" name="username" required></label><br><br>
-            <label>Password: <input type="password" name="password" required></label><br><br></h3>
-            <button type="submit"><a href="pagina_principal.html">LOGIN</a></button>
+            <h2>LOG IN</h2>
+            <p class="note">Nota: Se já tiver conta insira os dados aqui.</p>
+            <form action="scripts/login.php" method="post">
+                <label>Username:</label>
+                <input type="text" name="username" required>
+                <label>Password:</label>
+                <input type="password" name="password" required>
+                <button type="submit">LOGIN</button>
             </form>
         </div>
         <div class="form-box">
-            <h1>REGISTER</h1>
-            <h2>Nota:Se ainda nao tiver conta no nosso site deve cria-la aqui.</h2>
-            <form action="register.php" method="POST">
-            <h3><label>Email: <input type="email" name="email" required></label><br><br>
-            <label>Username: <input type="text" name="username" required></label><br><br>
-            <label>Password: <input type="password" name="password" required></label><br><br></h3> 
-            <button type="submit"><a href="pagina_principal.html">REGISTRAR</a></button>
+            <h2>REGISTER</h2>
+            <p class="note">Nota: Se ainda NÃO tiver conta no nosso site, deve criá-la aqui.</p>
+            <form action="scripts/register.php" method="post">
+                <label>Email:</label>
+                <input type="email" name="email" required>
+                <label>Username:</label>
+                <input type="text" name="username" required>
+                <label>Password:</label>
+                <input type="password" name="password" required>
+                <button type="submit">REGISTRAR</button>
             </form>
         </div>
     </div>
+
 </body>
 </html>
