@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($authenticated) {
         echo "Login com sucesso! Bem-vindo, $username.";
     } else {
-        echo "Credenciais inválidas. <a href='index.html'>Tentar novamente</a>";
+        echo "Credenciais inválidas. <a href='pagina_principal.html'>Tentar novamente</a>";
     }
 }
 ?>
