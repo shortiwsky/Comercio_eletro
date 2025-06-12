@@ -1,24 +1,31 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = trim($_POST["username"]);
-    $password = trim($_POST["password"]);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    $file = fopen("utilizadores.txt", "r");
-    $authenticated = false;
-
-    while (($line = fgets($file)) !== false) {
-        list($email, $user, $pass) = explode('|', trim($line));
-        if ($username === $user && $password === $pass) {
-            $authenticated = true;
-            break;
-        }
-    }
-    fclose($file);
-
-    if ($authenticated) {
-        echo "Login com sucesso! Bem-vindo, $username.";
-    } else {
-        echo "Credenciais inválidas. <a href='pagina_principal.html'>Tentar novamente</a>";
-    }
+$databasePath = __DIR__ . '/utilizadores.db';
+try {
+    $db = new SQLite3($databasePath);
+} catch (Exception $e) {
+    die("Erro ao abrir base de dados: " . $e->getMessage());
 }
+
+$username = $_POST['username'] ?? '';
+$password = $_POST['password'] ?? '';
+
+if (empty($username) || empty($password)) {
+    die("Todos os campos são obrigatórios.");
+}
+
+$stmt = $db->prepare("SELECT * FROM users WHERE username = :username");
+$stmt->bindValue(':username', $username, SQLITE3_TEXT);
+$result = $stmt->execute();
+$user = $result->fetchArray(SQLITE3_ASSOC);
+
+if ($user && password_verify($password, $user['password'])) {
+    echo "Login bem-sucedido! Bem-vindo, " . htmlspecialchars($user['username']) . "!";
+} else {
+    echo "Nome de utilizador ou palavra-passe incorretos.";
+}
+$db->close();
 ?>
