@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+date_default_timezone_set('Europe/Lisbon');
 $databasePath = __DIR__ . '/utilizadores.db';
 
 try {
@@ -43,8 +44,15 @@ $stmt->bindValue(':username', $username, SQLITE3_TEXT);
 $stmt->bindValue(':password', $hashedPassword, SQLITE3_TEXT);
 
 if ($stmt->execute()) {
-    echo "Registo efetuado com sucesso!";
+    echo "<script>
+        alert('Registo efetuado com sucesso!');
+        window.location.href = '../LOGIN.html';
+    </script>";
 } else {
     echo "Erro ao registar utilizador: " . $db->lastErrorMsg();
 }
+if (!$columnExists) {
+    $db->exec("ALTER TABLE users ADD COLUMN ultimo_acesso TEXT");
+}
+$db->close();
 ?>
