@@ -1,26 +1,13 @@
 // scripts/produto.js
+const urlParams = new URLSearchParams(window.location.search);
+const nome = urlParams.get("nome") || "Produto Desconhecido";
+const preco = urlParams.get("preco") || "0.00€";
+const imagem = urlParams.get("imagem") || "";
+const descricao = urlParams.get("descricao") || "";
+const detalhes = urlParams.get("detalhes") || "";
 
-// Função para extrair parâmetros da URL
-function obterParametros() {
-  const params = new URLSearchParams(window.location.search);
-  return {
-    nome: params.get('nome'),
-    preco: params.get('preco'),
-    imagem: params.get('imagem'),
-    descricao: params.get('descricao'),
-    detalhes: params.get('detalhes'),
-  };
-}
-
-// Preencher a página com os dados do produto
-function preencherProduto() {
-  const produto = obterParametros();
-
-  document.getElementById('nome-produto').textContent = produto.nome || 'Produto';
-  document.getElementById('imagem-produto').src = produto.imagem || '';
-  document.getElementById('descricao-produto').textContent = produto.descricao || 'Sem descrição.';
-  document.getElementById('preco-produto').textContent = produto.preco || 'N/A';
-  document.getElementById('detalhes-produto').value = produto.detalhes || '';
-}
-
-document.addEventListener('DOMContentLoaded', preencherProduto);
+document.getElementById("nome-produto").textContent = nome;
+document.getElementById("preco-produto").textContent = preco;
+document.getElementById("imagem-produto").src = imagem;
+document.getElementById("descricao-produto").textContent = descricao;
+document.getElementById("detalhes-produto").value = detalhes;

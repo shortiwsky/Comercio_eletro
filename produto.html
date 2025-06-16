@@ -17,30 +17,20 @@
   </div>
 
   <div class="produto-container">
-    <h1 id="nome-produto">Produto</h1>
-    <hr>
-
-    <img id="imagem-produto" src="" alt="Imagem do Produto" width="300" style="border-radius: 10px;"><br><br>
-
-    <div class="descricao">
-      <p><strong>Descrição:</strong></p>
-      <p id="descricao-produto"></p>
+    <h1 id="nome-produto">Produto</h1><hr>
+    <img id="imagem-produto" src="" alt="Imagem do Produto" width="300"><br><br>
+    <div class="descricao"><p><strong>Descrição:</strong></p><p id="descricao-produto"></p></div>
+    <div class="valor"><p><strong>Valor do produto:</strong> <span id="preco-produto"></span></p></div>
+    <div class="detalhes"><p><strong>Acerca do produto:</strong></p>
+      <textarea readonly rows="6" id="detalhes-produto" style="width:100%;"></textarea>
     </div>
-
-    <div class="valor">
-      <p><strong>Valor do produto:</strong> <span id="preco-produto"></span></p>
-    </div>
-
-    <div class="detalhes">
-      <p><strong>Acerca do produto:</strong></p>
-      <textarea readonly rows="6" id="detalhes-produto" style="width: 100%;"></textarea>
-    </div>
-
     <div class="botao-carrinho">
-      <a href="carrinho.html">Adicionar ao Carrinho</a>
+      <button id="adicionarCarrinhoBtn">Adicionar ao Carrinho</button>
     </div>
   </div>
 
   <script src="scripts/produto.js"></script>
+  <script src="scripts/adicionar_carrinho.js"></script>
 </body>
 </html>
+
