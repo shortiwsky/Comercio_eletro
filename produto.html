@@ -1,43 +1,46 @@
 <!DOCTYPE html>
-<html 
+<html lang="pt-PT">
 <head>
-
-    <title>Produto</title>
-     <link rel="stylesheet" href="styles/styles.css">
-<link rel="stylesheet" href="styles/menu.css">
+  <meta charset="UTF-8">
+  <title>Produto</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/menu.css">
 </head>
-<body.produto>
-<div class="cabecalho-sps">
+<body>
+  <div class="cabecalho-sps">
     <h1 class="titulo-sps">SPS</h1>
     <ul class="menu-navegacao">
-      <li><a href="pagina_principal.html">Pagina Principal</a></li>
+      <li><a href="pagina_principal.html">Página Principal</a></li>
       <li><a href="carrinho.html">Carrinho</a></li>
       <li><a href="LOGIN.html">Login/Register</a></li>
     </ul>
   </div>
 
-<div class="produto-container">
-    <pre> <h1> Produto</pre> </h1>
-    <hr> </hr>
+  <div class="produto-container">
+    <h1 id="nome-produto">Produto</h1>
+    <hr>
+
+    <img id="imagem-produto" src="" alt="Imagem do Produto" width="300" style="border-radius: 10px;"><br><br>
 
     <div class="descricao">
-        <p>Descrição da imagem:</p>
+      <p><strong>Descrição:</strong></p>
+      <p id="descricao-produto"></p>
     </div>
 
-<div class="valor">
-    <p><strong>Valor do produto:</strong> </p>
-</div>
-   <div class="detalhes">
-    <p><strong>Acerca do produto:</strong></p>
-    <textarea readonly rows="10" ></textarea>
-</div>
+    <div class="valor">
+      <p><strong>Valor do produto:</strong> <span id="preco-produto"></span></p>
+    </div>
+
+    <div class="detalhes">
+      <p><strong>Acerca do produto:</strong></p>
+      <textarea readonly rows="6" id="detalhes-produto" style="width: 100%;"></textarea>
+    </div>
 
     <div class="botao-carrinho">
-        <a href="carrinho.html">Carrinho</a>
+      <a href="carrinho.html">Adicionar ao Carrinho</a>
     </div>
- 
+  </div>
 
-</div>
-
+  <script src="scripts/produtos.js"></script>
 </body>
 </html>

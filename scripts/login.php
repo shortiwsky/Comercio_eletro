@@ -1,4 +1,12 @@
 <?php
+session_start();
+if (isset($_SESSION['username'])) {
+    echo "<script>
+        alert('Já existe um utilizador logado: " . htmlspecialchars($_SESSION['username']) . ". Faça logout primeiro.');
+        window.location.href = '../LOGIN.html';
+    </script>";
+    exit;
+}
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -28,6 +36,7 @@ if ($user && password_verify($password, $user['password'])) {
     $stmtUpdate->bindValue(':agora', date('Y-m-d H:i:s'), SQLITE3_TEXT);
     $stmtUpdate->bindValue(':username', $username, SQLITE3_TEXT);
     $stmtUpdate->execute();
+    $_SESSION['username'] = $user['username'];
     $safeUsername = htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8');
     echo "<script>
         alert('Bem-vindo, $safeUsername!');

@@ -1,60 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-PT">
 <head>
-  <title>SPS</title>
   <meta charset="UTF-8">
+  <title>SPS</title>
   <link rel="stylesheet" href="styles/menu.css">
-  <style>
-    .card-nintendo {
-      width: 200px;
-      height: 230px;
-      padding: 10px;
-      border: 5px solid white;
-      margin-top: -2mm;   
-      margin-left: 2mm;   
-      background-color: #ffffff;
-      border-radius: 15px;
-    }
-    
-    body {
-      margin: 0;
-      padding: 10px;
-      font-family: Arial, sans-serif;
-    }
-    
-    .conteudo {
-      background-color: #dce2dc;
-      padding: 10px;
-      border-radius: 15px;
-      margin-top: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/pagina_principal.css">
 </head>
 <body>
+
   <div class="cabecalho-sps">
     <h1 class="titulo-sps">SPS</h1>
     <ul class="menu-navegacao">
-      <li><a href="pagina_principal.html">Pagina Principal</a></li>
+      <li><a href="pagina_principal.html">Página Principal</a></li>
       <li><a href="carrinho.html">Carrinho</a></li>
       <li><a href="LOGIN.html">Login/Register</a></li>
     </ul>
   </div>
 
   <div class="conteudo">
-    <h3>Produtos populares:</h3>
-    <a href="nintendoswitch.html" style="display: inline-block;text-decoration: none;">
-      <div class="card-nintendo">
-        <img src="imagens/nintendoswitch.jpg" alt="Nintendo Switch" width="200" height="150">
-        <p style="color: black;">Consola Nintendo Switch</p>
-        <p style="color:red;">Preço: 289.99€</p>
-      </div>
+    <h3>Produtos Populares:</h3>
+
+  <div class="slider-container">
+     <button class="seta seta-esquerda" onclick="moverSlider(-1)">❮</button>
+     <div class="janela-produtos">
+     <div class="produtos-slider" id="produtosSlider">
+
+    <a href="nintendositch.html" class="card-nintendo">
+      <img src="imagens/nintendoswitch.jpg" alt="Nintendo Switch">
+      <p>Consola Nintendo Switch</p>
+      <p class="preco">289.99€</p>
+    </a>
+
+    <a href="ps5.html" class="card-nintendo">
+      <img src="imagens/ps5.jpg" alt="PlayStation 5">
+      <p>PlayStation 5</p>
+      <p class="preco">499.99€</p>
+    </a>
+
+    <a href="xbox.html" class="card-nintendo">
+      <img src="imagens/xbox.jpg" alt="Xbox Series X">
+      <p>Xbox Series X</p>
+      <p class="preco">479.99€</p>
+    </a>
+
+    <a href="joycons.html" class="card-nintendo">
+      <img src="imagens/joycons.jpg" alt="Joy-Cons Nintendo">
+      <p>Joy-Con Nintendo Switch</p>
+      <p class="preco">69.99€</p>
+    </a>
+
+    <a href="headset.html" class="card-nintendo">
+      <img src="imagens/headset.jpg" alt="Headset Gamer">
+      <p>Headset Gamer RGB</p>
+      <p class="preco">39.99€</p>
+    </a>
+
+    <a href="teclado.html" class="card-nintendo">
+      <img src="imagens/teclado.jpg" alt="Teclado Mecânico">
+      <p>Teclado Mecânico RGB</p>
+      <p class="preco">59.99€</p>
+    </a>
+
+    <!-- Produtos adicionais -->
+    <a href="monitor.html" class="card-nintendo">
+      <img src="imagens/monitor.jpg" alt="Monitor Gamer">
+      <p>Monitor Gamer 144Hz</p>
+      <p class="preco">169.99€</p>
+    </a>
+
+    <a href="cadeira.html" class="card-nintendo">
+      <img src="imagens/cadeira.jpg" alt="Cadeira Gamer">
+      <p>Cadeira Gamer Ergonómica</p>
+      <p class="preco">199.99€</p>
+    </a>
+
+    <a href="mouse.html" class="card-nintendo">
+      <img src="imagens/mouse.jpg" alt="Rato Gamer">
+      <p>Rato Gamer RGB</p>
+      <p class="preco">29.99€</p>
+    </a>
+
+    <a href="tapete.html" class="card-nintendo">
+      <img src="imagens/tapete.jpg" alt="Tapete Rato">
+      <p>Tapete de Rato XXL</p>
+      <p class="preco">14.99€</p>
+    </a>
+
+    <a href="webcam.html" class="card-nintendo">
+      <img src="imagens/webcam.jpg" alt="Webcam HD">
+      <p>Webcam HD 1080p</p>
+      <p class="preco">34.99€</p>
+    </a>
+
+    <a href="cooler.html" class="card-nintendo">
+      <img src="imagens/cooler.jpg" alt="Cooler RGB">
+      <p>Cooler CPU RGB</p>
+      <p class="preco">49.99€</p>
     </a>
   </div>
+  </div>
+  <button class="seta seta-direita" onclick="moverSlider(1)">❯</button>
+</div>
 
-  <h2>Quem somos:</h2>
-  <img src="nos.jpg" alt="Uma foto nossa" width="500" height="333">
-  <p>Aqui é onde vamos falar um pouco sobre nós e a nossa página.</p>
-  <hr>
-  <p>Contactos: telemóvel: +351 911111111; email: informacoes.sps@SPS.pt</p>
+    <hr>
+
+    <h2>Quem somos:</h2>
+    <img src="nos.jpg" alt="Uma foto nossa" width="500" height="333">
+    <p>Aqui é onde vamos falar um pouco sobre nós e a nossa página.</p>
+
+    <hr>
+    <p><strong>Contactos:</strong> Telemóvel: +351 911111111 | Email: <a href="mailto:informacoes.sps@SPS.pt">informacoes.sps@SPS.pt</a></p>
+  </div>
+
+  <script src="scripts/tabela_de_produtos.js"></script>
 </body>
 </html>

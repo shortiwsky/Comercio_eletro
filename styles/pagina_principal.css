@@ -1,0 +1,85 @@
+.conteudo {
+  background-color: #dce2dc;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.janela-produtos {
+  overflow: hidden;
+  width: 100%;
+}
+.produtos-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.produtos-slider a {
+  flex: 0 0 calc(100% / 6);
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s;
+}
+
+
+.card-nintendo:hover {
+  transform: scale(1.05);
+}
+.card-nintendo {
+  flex: 0 0 calc(100% / 6 - 20px);
+  box-sizing: border-box;
+  padding: 15px;
+  border: 2px solid #ccc;
+  background-color: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-nintendo img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  padding: 5px;
+}
+.card-nintendo p {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  padding: 8px 12px;
+  border-radius: 50%;
+}
+
+.seta-esquerda {
+  left: 5px;
+}
+
+.seta-direita {
+  right: 5px;
+}
+hr {
+  margin: 30px 0;
+}
