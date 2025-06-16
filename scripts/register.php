@@ -34,7 +34,13 @@ $result = $stmt->execute();
 $data = $result->fetchArray(SQLITE3_ASSOC);
 
 if ($data['count'] > 0) {
-    die("O nome de Utilizador já existe.");
+    echo "
+    <script>
+        alert('O nome de Utilizador já existe.');
+        window.location.href = '../LOGIN.html';
+    </script>
+    ";
+    exit;
 }
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
