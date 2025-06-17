@@ -1,4 +1,3 @@
-// scripts/adicionar_carrinho.js
 document.getElementById("adicionarCarrinhoBtn").addEventListener("click", function () {
   const nome = document.getElementById("nome-produto").textContent;
   const preco = document.getElementById("preco-produto").textContent;

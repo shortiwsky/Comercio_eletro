@@ -10,10 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const produtos = Array.from(listaProdutos.children);
   const produtosPorPagina = 6;
-  const larguraProduto = produtos[0].offsetWidth + 20; // Ajusta conforme o gap/margem
+  const larguraProduto = produtos[0].offsetWidth + 20;
   let indice = 0;
 
-  // Clona os produtos para efeito de loop
   produtos.forEach(produto => {
     const clone = produto.cloneNode(true);
     listaProdutos.appendChild(clone);
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setaDireita.addEventListener("click", () => {
     indice++;
     if (indice >= listaProdutos.children.length - produtosPorPagina) {
-      indice = 0; // volta ao início
+      indice = 0;
     }
     atualizarCarrossel();
   });
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setaEsquerda.addEventListener("click", () => {
     indice--;
     if (indice < 0) {
-      indice = listaProdutos.children.length - produtosPorPagina; // vai para o fim
+      indice = listaProdutos.children.length - produtosPorPagina;
     }
     atualizarCarrossel();
   });

@@ -1,4 +1,3 @@
-// scripts/verificar_login.js
 
 document.addEventListener("DOMContentLoaded", () => {
   const username = localStorage.getItem("username");

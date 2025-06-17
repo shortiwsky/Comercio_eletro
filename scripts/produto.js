@@ -1,4 +1,3 @@
-// scripts/produto.js
 const urlParams = new URLSearchParams(window.location.search);
 const nome = urlParams.get("nome") || "Produto Desconhecido";
 const preco = urlParams.get("preco") || "0.00€";

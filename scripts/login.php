@@ -34,7 +34,6 @@ $result = $stmt->execute();
 $user = $result->fetchArray(SQLITE3_ASSOC);
 
 if ($user && password_verify($password, $user['password'])) {
-    // Atualiza último acesso
     $stmtUpdate = $db->prepare("UPDATE users SET ultimo_acesso = :agora WHERE username = :username");
     $stmtUpdate->bindValue(':agora', date('Y-m-d H:i:s'), SQLITE3_TEXT);
     $stmtUpdate->bindValue(':username', $username, SQLITE3_TEXT);
@@ -43,7 +42,6 @@ if ($user && password_verify($password, $user['password'])) {
     $_SESSION['username'] = $user['username'];
     $safeUsername = htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8');
 
-    // 👉 Aqui é onde guardamos no localStorage com JS
     echo "<script>
         alert('Bem-vindo, $safeUsername!');
         localStorage.setItem('username', '$safeUsername');

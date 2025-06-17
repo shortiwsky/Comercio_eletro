@@ -28,14 +28,13 @@
 button[type="submit"] {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #33B5E5;
   border: none;
   color: white;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
-
 #preco-mostrado {
   margin-top: 15px;
   font-size: 18px;

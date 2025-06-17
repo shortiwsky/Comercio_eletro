@@ -1,0 +1,32 @@
+o/* styles/global.css */
+body {
+  background-color: #e6ede6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  background-color: #e6ede6;
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.footer h3 {
+  font-size: 18px;
+}
+
+.footer-foto {
+  max-width: 150px;
+  margin: 10px 0;
+}
+
+.footer a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
