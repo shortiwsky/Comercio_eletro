@@ -28,25 +28,38 @@ if (empty($username) || empty($password)) {
     die("Todos os campos são obrigatórios.");
 }
 
+// Verifica o utilizador
 $stmt = $db->prepare("SELECT * FROM users WHERE username = :username");
 $stmt->bindValue(':username', $username, SQLITE3_TEXT);
 $result = $stmt->execute();
 $user = $result->fetchArray(SQLITE3_ASSOC);
 
 if ($user && password_verify($password, $user['password'])) {
+    // Atualiza o último acesso
     $stmtUpdate = $db->prepare("UPDATE users SET ultimo_acesso = :agora WHERE username = :username");
     $stmtUpdate->bindValue(':agora', date('Y-m-d H:i:s'), SQLITE3_TEXT);
     $stmtUpdate->bindValue(':username', $username, SQLITE3_TEXT);
     $stmtUpdate->execute();
 
     $_SESSION['username'] = $user['username'];
+    $_SESSION['role'] = $user['role'] ?? 'user';
+
     $safeUsername = htmlspecialchars($user['username'], ENT_QUOTES, 'UTF-8');
 
-    echo "<script>
-        alert('Bem-vindo, $safeUsername!');
-        localStorage.setItem('username', '$safeUsername');
-        window.location.href = '../produto.html';
-    </script>";
+    if ($user['role'] === 'admin') {
+        echo "<script>
+            alert('Bem-vindo, administrador $safeUsername!');
+            localStorage.setItem('username', '$safeUsername');
+            localStorage.setItem('role', 'admin');
+            window.location.href = '../admin.html';
+        </script>";
+    } else {
+        echo "<script>
+            alert('Bem-vindo, $safeUsername!');
+            localStorage.setItem('username', '$safeUsername');
+            window.location.href = '../pagina_principal.html';
+        </script>";
+    }
 } else {
     echo "<script>
         alert('Nome de utilizador ou palavra-passe incorretos.');

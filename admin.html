@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Adicionar Produto</title>
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+  <div class="cabecalho-sps">
+    <a href="scripts/logout.php" class="logout-button">Logout</a>
+    <h1 class="titulo-sps">SPS-Administração</h1>
+    <ul class="menu-navegacao">
+      <li><a href="pagina_principal.html">Página Principal</a></li>
+      <li><a href="carrinho.html">Carrinho</a></li>
+      <li><a href="LOGIN.html">Login/Register</a></li>
+    </ul>
+  </div>
+
+  <div class="container-admin">
+    <div class="form-box-admin">
+      <h2>Adicionar Produto</h2>
+      <form action="scripts/adicionar_produto.php" method="POST">
+        <label for="nome">Nome do Produto:</label>
+        <input type="text" name="nome" required><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" required></textarea><br>
+
+        <label for="preco">Preço (€):</label>
+        <input type="number" name="preco" step="0.01" required><br>
+
+        <button type="submit" class="btn-azul">Guardar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

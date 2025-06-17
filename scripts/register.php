@@ -60,5 +60,8 @@ if ($stmt->execute()) {
 if (!$columnExists) {
     $db->exec("ALTER TABLE users ADD COLUMN ultimo_acesso TEXT");
 }
+if (!$columnExists) {
+    $db->exec("ALTER TABLE users ADD COLUMN role TEXT DEFAULT 'user'");
+}
 $db->close();
 ?>
