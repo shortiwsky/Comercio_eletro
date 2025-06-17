@@ -1,26 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
-    <title>Finalizar compra</title>
+  <meta charset="UTF-8">
+  <title>Finalizar Compra</title>
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/finalizar_compra.css">
 </head>
-<link rel="stylesheet" href="styles/menu.css">
 <body>
-<div class="cabecalho-sps">
+  <div class="cabecalho-sps">
     <h1 class="titulo-sps">SPS</h1>
     <ul class="menu-navegacao">
-      <li><a href="pagina_principal.html">Pagina Principal</a></li>
+      <li><a href="pagina_principal.html">Página Principal</a></li>
       <li><a href="carrinho.html">Carrinho</a></li>
       <li><a href="LOGIN.html">Login/Register</a></li>
     </ul>
   </div>
-    <h1>Compra</h1>
-    <p><label for="nome">Morada:</label>
-    <input type="text" id="Morada" name="Morada" /></p>
-    <p><label for="nome">Codigo Postal:</label>
-    <input type="text" id="Codigo postal" name="Codigo postal" /></p>
-    <p><label for="nome">Numero de telemovel:</label>
-    <input type="text" id="Numero de telemovel" name="Numero de telemovel" /></p>
-    <button><p><a href="file:///home/deapc1dd/carrinho.html">Comprar</a></p></button>
-	<p> Nota: Só aceitamos MBWay como forma de pagamento </ p>
+
+  <div class="container">
+    <div class="form-box">
+      <h2>Finalizar Compra</h2>
+      <form action="scripts/registar_encomenda.php" method="POST">
+        <label for="username">Nome de Utilizador:</label>
+        <input type="text" name="username" required><br>
+
+        <label for="morada">Morada:</label>
+        <input type="text" name="morada" required><br>
+
+        <label for="codigo_postal">Código Postal:</label>
+        <input type="text" name="codigo_postal" required><br>
+
+        <label for="telemovel">Nº Telemóvel:</label>
+        <input type="text" name="telemovel" required><br>
+
+        <p id="preco-mostrado"><strong>Preço total:</strong> <span id="preco-valor">0€</span></p>
+
+        <input type="hidden" name="preco" id="preco">
+        <input type="hidden" name="conteudo" id="conteudo">
+
+        <button type="submit">Finalizar Compra</button>
+      </form>
+      <p>Nota: Só aceitamos MBWay como forma de pagamento.</p>
+    </div>
+  </div>
+
+  <script src="scripts/finalizar_compra.js"></script>
 </body>
 </html>

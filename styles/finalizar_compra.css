@@ -1,0 +1,42 @@
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+  margin-bottom: 10px;
+}
+
+.form-box form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-box form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#preco-mostrado {
+  margin-top: 15px;
+  font-size: 18px;
+}
