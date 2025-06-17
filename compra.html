@@ -21,7 +21,7 @@
       <h2>Finalizar Compra</h2>
       <form action="scripts/registar_encomenda.php" method="POST">
         <label for="username">Nome de Utilizador:</label>
-        <input type="text" name="username" required><br>
+        <input type="text" name="username" readonly><br>
 
         <label for="morada">Morada:</label>
         <input type="text" name="morada" required><br>
@@ -42,7 +42,7 @@
       <p>Nota: Só aceitamos MBWay como forma de pagamento.</p>
     </div>
   </div>
-
+  <script src="scripts/verificar_login.js"></script>
   <script src="scripts/finalizar_compra.js"></script>
 </body>
 </html>
