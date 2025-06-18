@@ -40,3 +40,4 @@ Nome: Alterar produtos.
 Descrição: Como administrador tenho que ter habilidade de alterar informações do produto.
 Prioridade: Médio
 
+Pedro Gonçalves commit final
