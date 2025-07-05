@@ -41,4 +41,3 @@ Descrição: Como administrador tenho que ter habilidade de alterar informaçõe
 Prioridade: Médio
 
 Pedro Gonçalves commit final
-short commit final
